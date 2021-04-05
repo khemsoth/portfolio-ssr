@@ -1,13 +1,18 @@
 <template>
-  <div>
-    <input class="nav-btn" v-on:click="navToggle" :class="{ open: isOpen, closed: !isOpen }" type="button" value="+">
-    <div :class="{ 'nav-open': isOpen, 'nav-closed': !isOpen }"  class="nav">
-    <ul class="nav-list">
-      <li><nuxt-link class="nav-list-item" to="/">Home</nuxt-link></li>
-      <li><nuxt-link class="nav-list-item" to="/about">About</nuxt-link></li>
-      <li><nuxt-link class="nav-list-item" to="/projects">Projects</nuxt-link></li>
-      <li><nuxt-link class="nav-list-item" to="/contact">Contact</nuxt-link></li>
-    </ul>
+  <div class="header">
+    <div class="title-cont">
+     <h1 class="title">Keith Hemsoth</h1>
+    </div>
+    <div class="nav-cont">
+      <input class="nav-btn" v-on:click="navToggle" :class="{ open: isOpen, closed: !isOpen }" type="button" value="+">
+      <div :class="{ 'nav-open': isOpen, 'nav-closed': !isOpen }"  class="nav">
+      <ul class="nav-list">
+        <li><nuxt-link class="nav-list-item" to="/">Home</nuxt-link></li>
+        <li><nuxt-link class="nav-list-item" to="/about">About</nuxt-link></li>
+        <li><nuxt-link class="nav-list-item" to="/projects">Projects</nuxt-link></li>
+        <li><nuxt-link class="nav-list-item" to="/contact">Contact</nuxt-link></li>
+      </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -33,13 +38,39 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .title-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 50%;
+  }
+
+  .nav-cont {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
   .nav-btn {
-    margin: 0 auto;
-    font-size: 3rem;
     cursor: pointer;
     border: none;
-    background-color: rgba(0, 0, 0, 0)
+    background-color: rgba(0, 0, 0, 0);
+    width: 3rem;
+    padding: 0;
+    font-size: 2rem;
+    align-self: flex-end;
   }
 
   .nav-btn:focus {
@@ -58,9 +89,12 @@ export default {
 
   .nav-list {
     list-style-type: none;
-    width: 15vw;
-    border: 1px solid black;
-
+    position: absolute;  
+    width: 45vw; 
+    right: 1rem;
+    background-color: lightslategray;
+    padding: 1rem;
+    border-radius: 1rem;
   }
 
   .nav-list-item {
@@ -87,12 +121,20 @@ export default {
 
   .nav-open {
     animation: menuDown .5s ease-in-out forwards;
+    -webkit-animation: menuDown .5s ease-in-out forwards;
+    -ms-animation: menuDown .5s ease-in-out forwards;
+    -moz-animation: menuDown .5s ease-in-out forwards;
+    -o-webkit-animation: menuDown .5s ease-in-out forwards;
     transform-origin: top;
     visibility: visible
   }
 
   .nav-closed {
     animation: menuUp .5s ease-in-out forwards;
+    -webkit-animation: menuUp .5s ease-in-out forwards;
+    -ms-animation: menuUp .5s ease-in-out forwards;
+    -moz-animation: menuUp .5s ease-in-out forwards;
+    -o-webkit-animation: menuUp .5s ease-in-out forwards;
     transform-origin: top;
   }
 

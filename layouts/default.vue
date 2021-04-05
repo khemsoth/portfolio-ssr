@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Header class="header"/>
     <Nuxt />
   </div>
 </template>
@@ -69,5 +69,12 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+.header {
+  height: 20vh;
+  width: 100vw;
+  background-color: red;
+
 }
 </style>
