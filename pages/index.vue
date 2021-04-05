@@ -1,10 +1,6 @@
 <template>
   <div class="container">
-    <div>
-      <h1>
-        main page
-      </h1>
-    </div>
+    <h1 class="page-title">Main Page</h1>
   </div>
 </template>
 
@@ -20,6 +16,7 @@ export default {
 </script>
 
 <style>
+/*
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -28,6 +25,7 @@ export default {
   align-items: center;
   text-align: center;
 }
+*/
 
 .title {
   font-family:

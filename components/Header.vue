@@ -7,10 +7,10 @@
       <input class="nav-btn" v-on:click="navToggle" :class="{ open: isOpen, closed: !isOpen }" type="button" value="+">
       <div :class="{ 'nav-open': isOpen, 'nav-closed': !isOpen }"  class="nav">
       <ul class="nav-list">
-        <li><nuxt-link class="nav-list-item" to="/">Home</nuxt-link></li>
-        <li><nuxt-link class="nav-list-item" to="/about">About</nuxt-link></li>
-        <li><nuxt-link class="nav-list-item" to="/projects">Projects</nuxt-link></li>
-        <li><nuxt-link class="nav-list-item" to="/contact">Contact</nuxt-link></li>
+        <li v-on:click="closeMenu"><nuxt-link class="nav-list-item" to="/">Home</nuxt-link></li>
+        <li v-on:click="closeMenu"><nuxt-link class="nav-list-item" to="/about">About</nuxt-link></li>
+        <li v-on:click="closeMenu"><nuxt-link class="nav-list-item" to="/projects">Projects</nuxt-link></li>
+        <li v-on:click="closeMenu"><nuxt-link class="nav-list-item" to="/contact">Contact</nuxt-link></li>
       </ul>
       </div>
     </div>
@@ -33,6 +33,9 @@ export default {
       else {
         this.isOpen = !this.isOpen
       }
+    },
+    closeMenu() {
+      this.isOpen = false
     }
   }
 }
@@ -46,6 +49,7 @@ export default {
 
   .title {
     font-size: 2rem;
+    color: black;
   }
 
   .title-cont {

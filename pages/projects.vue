@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>This will be the projects page</h1>
+    <h1 class="page-title">Projects</h1>
+
   </div>
 </template>
 
