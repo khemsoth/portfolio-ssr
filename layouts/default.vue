@@ -1,16 +1,19 @@
 <template>
-  <div>
+  <div class="page">
     <Header class="header"/>
     <Nuxt />
+    <Footer class="footer"/>
   </div>
 </template>
 
 <script>
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 export default {
   components: {
-    Header
+    Header,
+    Footer
   }
 }
 </script>
@@ -71,10 +74,16 @@ html {
   background-color: #35495e;
 }
 
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
 .header {
   height: 20vh;
   width: 100vw;
   background-color: red;
-
 }
 </style>

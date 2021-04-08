@@ -22,7 +22,7 @@ export default {
   name: 'Header',
   data() {
     return {
-      isOpen: false
+      isOpen: null
     }
   },
   methods: {
@@ -58,6 +58,10 @@ export default {
     justify-content: center;
     text-align: center;
     height: 50%;
+  }
+
+  .nav {
+    
   }
 
   .nav-cont {
