@@ -2,16 +2,25 @@
   <div class="header">
     <div class="title-cont">
      <h1 class="title">Keith Hemsoth</h1>
+     <p class="circa">c. 1991</p>
     </div>
     <div class="nav-cont">
-      <input class="nav-btn" v-on:click="navToggle" :class="{ open: isOpen, closed: !isOpen }" type="button" value="+">
-      <div :class="{ 'nav-open': isOpen, 'closed-nav': isClosed, 'nav-closed': animate }"  class="nav">
-      <ul class="nav-list">
-        <li v-on:click="closeMenu"><nuxt-link class="nav-list-item" to="/">Home</nuxt-link></li>
-        <li v-on:click="closeMenu"><nuxt-link class="nav-list-item" to="/about">About</nuxt-link></li>
-        <li v-on:click="closeMenu"><nuxt-link class="nav-list-item" to="/projects">Projects</nuxt-link></li>
-        <li v-on:click="closeMenu"><nuxt-link class="nav-list-item" to="/contact">Contact</nuxt-link></li>
-      </ul>
+      <div class="social-media-cont">
+        <div class="icon-cont">
+         <a class="soc-icon" href="https://www.linkedin.com/in/keithhemsoth/" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'linkedin']" /></a>
+         <a class="soc-icon" href="https://github.com/khemsoth" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'github']" /></a>
+        </div> 
+      </div>
+      <div class="nav">
+        <input class="nav-btn" v-on:click="navToggle" :class="{ open: isOpen, closed: !isOpen }" type="button" value="+">
+        <div :class="{ 'nav-open': isOpen, 'closed-nav': isClosed, 'nav-closed': animate }">
+          <ul class="nav-list">
+            <li v-on:click="closeMenu"><nuxt-link class="nav-list-item" to="/">Home</nuxt-link></li>
+            <li v-on:click="closeMenu"><nuxt-link class="nav-list-item" to="/about">About</nuxt-link></li>
+            <li v-on:click="closeMenu"><nuxt-link class="nav-list-item" to="/projects">Projects</nuxt-link></li>
+            <li v-on:click="closeMenu"><nuxt-link class="nav-list-item" to="/contact">Contact</nuxt-link></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -36,8 +45,7 @@ export default {
       else {
         this.isOpen = !this.isOpen
         this.animate = true
-        setTimeout(() => {this.animate = false;         this.isClosed = !this.isClosed
-}, 500)
+        setTimeout(() => {this.animate = false; this.isClosed = !this.isClosed}, 500)
 }
     },
     closeMenu() {
@@ -67,14 +75,33 @@ export default {
     height: 50%;
   }
 
+  .social-media-cont {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .icon-cont {
+    padding: 0 1rem;
+  }
+
+  .soc-icon {
+    margin: 0 1rem;
+    font-size: 1.3rem;
+  }
+
   .nav {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 50%;
   }
 
   .nav-cont {
     height: 50%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-end;
   }
 

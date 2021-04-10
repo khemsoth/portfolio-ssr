@@ -1,15 +1,18 @@
 <template>
-    <h3 class="sub-title">Web Developer</h3>
+  <div>
+    <h3 class="sub-title">Hello!</h3>
+    <p class="home-content">
+      My name is Keith Hemsoth, and I am a Freelance Web Developer based out of Cleveland, Ohio!
+    </p>
+  </div>
 </template>
 
 <script>
-import { KinesisContainer, KinesisElement } from 'vue-kinesis'
 
 export default {
   name: 'Home',
   components: {
-    KinesisContainer,
-    KinesisElement
+
   }
 }
 </script>
@@ -52,24 +55,19 @@ export default {
   padding-bottom: 15px;
 }
 
-.container {
-  min-height: 100%;
-  text-align: center;
-  overflow: hidden;
-}
-
 .sub-title {
   font-size: 2.5rem;
   margin: 4rem;
+  text-align: center;
+}
+
+.home-content {
+  text-align: center;
 }
 
 .icon {
   margin: 4rem;
   font-size: 1.5rem;
-}
-
-.kin-parent {
-  min-height: 100%;
 }
 
 </style>

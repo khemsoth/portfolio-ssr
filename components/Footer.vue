@@ -33,8 +33,8 @@ export default {
   }
 
   .soc-icon {
-    margin: 0 1rem;
     color: black;
+    padding: 0;
   }
 
 </style>

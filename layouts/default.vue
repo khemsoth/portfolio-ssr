@@ -2,7 +2,7 @@
   <div class="page">
     <Header class="header"/>
     <Nuxt class="content" />
-    <Footer class="footer"/>
+    <!--<Footer class="footer"/> -->
   </div>
 </template>
 
