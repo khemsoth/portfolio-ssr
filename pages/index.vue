@@ -2,7 +2,7 @@
   <div>
     <h3 class="sub-title">Hello!</h3>
     <p class="home-content">
-      My name is Keith Hemsoth, and I am a Freelance Web Developer based out of Cleveland, Ohio!
+      My name is Keith Hemsoth, and I am a Freelance Developer based out of Cleveland, Ohio!
     </p>
   </div>
 </template>

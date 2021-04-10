@@ -11,7 +11,7 @@
          <a class="soc-icon" href="https://github.com/khemsoth" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'github']" /></a>
         </div> 
       </div>
-      <div class="nav">
+      <div v-on-clickaway='away' class="nav">
         <input class="nav-btn" v-on:click="navToggle" :class="{ open: isOpen, closed: !isOpen }" type="button" value="+">
         <div :class="{ 'nav-open': isOpen, 'closed-nav': isClosed, 'nav-closed': animate }">
           <ul class="nav-list">
@@ -27,8 +27,11 @@
 </template>
 
 <script>
+import { mixin as clickaway } from 'vue-clickaway'
+
 export default {
   name: 'Header',
+  mixins: [clickaway],
   data() {
     return {
       isOpen: false,
@@ -50,13 +53,17 @@ export default {
     },
     closeMenu() {
       this.isOpen = false
-      this.navClose = false
+      this.animate = true
+      setTimeout(() => {this.animate = false; this.isClosed = !this.isClosed}, 500)
+    },
+    away() {
+      this.closeMenu()
     }
   }
 }
 </script>
 
-<style scoped>
+<style>
   .header {
     display: flex;
     flex-direction: column;
