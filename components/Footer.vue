@@ -1,9 +1,10 @@
 <template>
   <div class="footer">
     <h3 class="footer-title">Keith Hemsoth</h3>
+    <h5 class="circa">c. 1991</h5>
     <div class="social-media-cont">
-      <a href="https://www.linkedin.com/in/keithhemsoth/" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'linkedin']" /></a>
-      <a href="https://github.com/khemsoth" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'github']" /></a>
+      <a class="soc-icon" href="https://www.linkedin.com/in/keithhemsoth/" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'linkedin']" /></a>
+      <a class="soc-icon" href="https://github.com/khemsoth" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'github']" /></a>
     </div>
   </div>
 </template>
@@ -18,14 +19,22 @@ export default {
 <style>
   .footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    text-align: center;
     width: 100vw;
-    height: 10vh;
+    height: 15vh;
     background-color: lightblue;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
   }
 
-  .footer-title {
+  .circa {
+    font-size: .7rem;
+  }
+
+  .soc-icon {
+    margin: 0 1rem;
+    color: black;
   }
 
 </style>

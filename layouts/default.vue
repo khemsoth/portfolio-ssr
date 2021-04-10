@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <Header class="header"/>
-    <Nuxt />
+    <Nuxt class="content" />
     <Footer class="footer"/>
   </div>
 </template>
@@ -20,6 +20,7 @@ export default {
 
 <style>
 html {
+  height: 100%;
   font-family:
     'Source Sans Pro',
     -apple-system,
@@ -36,6 +37,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+
+body {
+  height: 100%;
 }
 
 *,
@@ -77,8 +82,7 @@ html {
 .page {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  justify-content: space-between;
+  min-height: 100vh;
 }
 
 .header {
@@ -86,4 +90,10 @@ html {
   width: 100vw;
   background-color: red;
 }
+
+.content {
+  flex: 1;
+  min-height: 100%;
+}
+
 </style>

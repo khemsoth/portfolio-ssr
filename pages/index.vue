@@ -1,16 +1,15 @@
 <template>
-  <div class="container">
-    <h1 class="page-title">Main Page</h1>
-  </div>
+    <h3 class="sub-title">Web Developer</h3>
 </template>
 
 <script>
-import Header from '../components/Header'
+import { KinesisContainer, KinesisElement } from 'vue-kinesis'
 
 export default {
   name: 'Home',
   components: {
-    Header
+    KinesisContainer,
+    KinesisElement
   }
 }
 </script>
@@ -53,7 +52,24 @@ export default {
   padding-bottom: 15px;
 }
 
-.links {
-  padding-top: 15px;
+.container {
+  min-height: 100%;
+  text-align: center;
+  overflow: hidden;
 }
+
+.sub-title {
+  font-size: 2.5rem;
+  margin: 4rem;
+}
+
+.icon {
+  margin: 4rem;
+  font-size: 1.5rem;
+}
+
+.kin-parent {
+  min-height: 100%;
+}
+
 </style>

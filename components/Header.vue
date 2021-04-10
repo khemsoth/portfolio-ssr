@@ -5,7 +5,7 @@
     </div>
     <div class="nav-cont">
       <input class="nav-btn" v-on:click="navToggle" :class="{ open: isOpen, closed: !isOpen }" type="button" value="+">
-      <div :class="{ 'nav-open': isOpen, 'nav-closed': !isOpen }"  class="nav">
+      <div :class="{ 'nav-open': isOpen, 'closed-nav': isClosed, 'nav-closed': animate }"  class="nav">
       <ul class="nav-list">
         <li v-on:click="closeMenu"><nuxt-link class="nav-list-item" to="/">Home</nuxt-link></li>
         <li v-on:click="closeMenu"><nuxt-link class="nav-list-item" to="/about">About</nuxt-link></li>
@@ -22,20 +22,27 @@ export default {
   name: 'Header',
   data() {
     return {
-      isOpen: null
+      isOpen: false,
+      isClosed: true,
+      animate: false,
     }
   },
   methods: {
     navToggle() {
-      if(this.isOpen === null) {
+      if(this.isOpen === false) {
         this.isOpen = true
+        this.isClosed = false
       }
       else {
         this.isOpen = !this.isOpen
-      }
+        this.animate = true
+        setTimeout(() => {this.animate = false;         this.isClosed = !this.isClosed
+}, 500)
+}
     },
     closeMenu() {
       this.isOpen = false
+      this.navClose = false
     }
   }
 }
@@ -134,7 +141,8 @@ export default {
     -moz-animation: menuDown .5s ease-in-out forwards;
     -o-webkit-animation: menuDown .5s ease-in-out forwards;
     transform-origin: top;
-    visibility: visible
+    visibility: visible;
+    z-index: 1;
   }
 
   .nav-closed {
@@ -144,6 +152,11 @@ export default {
     -moz-animation: menuUp .5s ease-in-out forwards;
     -o-webkit-animation: menuUp .5s ease-in-out forwards;
     transform-origin: top;
+    z-index: 1;
+  }
+
+  .closed-nav {
+    visibility: hidden;
   }
 
 </style>
