@@ -18,16 +18,6 @@ export default {
 </script>
 
 <style>
-/*
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-*/
 
 .subtitle {
   font-weight: 300;
@@ -45,6 +35,7 @@ export default {
 
 .home-content {
   text-align: center;
+  margin: 0 2rem;
 }
 
 .icon {
