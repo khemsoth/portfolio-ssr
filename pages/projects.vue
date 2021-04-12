@@ -9,6 +9,7 @@
       :title="project.title"
       :image="project.image"
       :description="project.description"
+      :link="project.link"
       class="project"
       >
       </li>
@@ -19,7 +20,7 @@
 <script>
 import noteImage from '../assets/images/kelly-sikkema--1_RZL8BGBM-unsplash.jpg'
 import fuelImage from '../assets/images/folco-masi-fwh28c0vUGk-unsplash.jpg'
-import restaurantImage from 'assets/images/dmitriy-k-4zTf1NVuw-0-unsplash.jpg'
+import FCSImage from 'assets/images/FCS.jpg'
 
 export default {
   name: 'Projects',
@@ -27,22 +28,28 @@ export default {
     return {
       projects: [
         {
-          title: 'test 1',
+          title: 'Jot It Down',
           image: noteImage,
-          description: 'This is the description of the above project'
+          description: 'Simple note app to keep track of anything you need to remember.',
+          link: 'https://jot-a-note.netlify.app/'
         },
         {
-          title: 'project 2',
+          title: 'Flag-to-Flag Fuel Calculator',
           image: fuelImage,
-          description: 'This is the description of the above project'
+          description: 'Fuel usage calculator with average laptime calculator to use the proper amount of fuel for your next race session.',
+          link: 'https://flag-to-flag-fuel.netlify.app/'
         },
         {
-          title: 'project 3',
-          image: restaurantImage,
-          description: 'This is the description of the above project'
-        }
+          title: 'Fantastic Concrete Solutions',
+          image: FCSImage,
+          description: 'Landing page for a local construction company, specializing in concrete washing, sealing, and repair.',
+          link: 'https://fantastic-concrete-solutions.herokuapp.com/'
+        },
       ]
     }
+  },
+  methods: {
+
   }
 }
 </script>
