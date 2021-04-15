@@ -1,14 +1,16 @@
 <template>
   <div>
-    <h1 class="page-title">Contact</h1>
+    <h1 class="page-title">Contact Me</h1>
     <form class="page-desc" name="contact">
       <h4 class="contact-title">Name:</h4>
       <input class="contact-desc" v-model="name" type="text" name="name" placeholder="Enter Name Here" required>
+      <hr class="divider">
       <h4 class="contact-title">Email:</h4>
       <input class="contact-desc" v-model="email" type="email" name="email" placeholder="Enter Email Here" required>
+      <hr class="divider">
       <h4 class="contact-title">Message:</h4>
       <textarea class="contact-desc" v-model="message" name="message" rows="5" placeholder="Enter Message Here" required></textarea>
-      <input type="button" value="Send Message" v-on:click="submitContactForm">
+      <input class="submit-btn" type="button" value="Send Message" v-on:click="submitContactForm">
     </form>
   </div>
 </template>
@@ -49,17 +51,39 @@ export default {
 
 <style scoped>
 
+  .page-title {
+    margin-left: 1rem;
+  }
+
   .page-desc {
+    display: flex;
+    flex-direction: column;
     width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 3rem;
   }
 
   .contact-title {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
   }
 
   .contact-desc {
-    width: 90%;
     margin: 1rem 0;
+    margin-bottom: 2rem;
+    border-radius: .3rem;
+    border: 1px solid gray;
+    padding: .5rem;
+  }
+
+  .submit-btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: .5rem;
+    width: 40vw;
+    align-self: flex-end;
+    margin-top: 2rem;
   }
 
 </style>

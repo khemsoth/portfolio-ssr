@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1 class="page-title">Projects</h1>
-    <ul>
+    <h1 class="page-title-projects">Projects</h1>
+    <ul class="projects">
       <li
       is="Project"
       v-for="project in projects"
@@ -56,10 +56,45 @@ export default {
 
 <style>
 
-  .project {
-    width: 90%;
-    margin: 4rem 0;
-    
+  .page-title-projects {
+    font-size: 2.5rem;
+    margin: 2rem 1rem;
+    font-style: italic;
   }
 
+  .project {
+    width: 90%;
+    margin: 4rem auto;
+  }
+
+  @media (min-width: 460px) {
+    .project {
+      width: 60%;
+    }
+
+    .projects {
+      padding: 0;
+      margin: 0 auto;
+    }
+
+    .page-title-projects {
+      margin-left: 6rem;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .project {
+      width: 50%;
+    }
+  }
+
+  @media (min-width: 720px) {
+    .project {
+      width: 45%;
+    }
+
+    .page-title-projects {
+      margin-left: 9rem;
+    }
+  }
 </style>

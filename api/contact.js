@@ -24,7 +24,6 @@ app.post('/', (req, res) => {
     text: `
       Name: ${req.body.name}
       Email: ${req.body.email}
-      Phone: ${req.body.phone}
       Message: ${req.body.message}
     `
   }

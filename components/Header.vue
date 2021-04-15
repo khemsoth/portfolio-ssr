@@ -13,7 +13,7 @@
       </div>
       <div v-on-clickaway="away" class="nav">
         <input class="nav-btn" v-on:click="navToggle" :class="{ open: isOpen, closed: !isOpen }" type="button" value="+">
-        <div :class="{ 'nav-open': isOpen, 'closed-nav': isClosed, 'nav-closed': animate }">
+        <div class="nav-bar" :class="{ 'nav-open': isOpen, 'closed-nav': isClosed, 'nav-closed': animate }">
           <ul class="nav-list">
             <li v-on:click="closeMenu"><nuxt-link class="nav-list-item" to="/">Home</nuxt-link></li>
             <li v-on:click="closeMenu"><nuxt-link class="nav-list-item" to="/about">About</nuxt-link></li>
@@ -191,6 +191,42 @@ export default {
 
   .closed-nav {
     visibility: hidden;
+  }
+
+  @media (min-width: 769px) {
+    .nav-btn {
+      display: none;
+    }
+
+    .closed-nav {
+      visibility: visible;
+    }
+
+    .nav-list {
+      position: static;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      background-color: rgba(0, 0, 0, 0);
+      list-style-type: none;
+    }
+
+    .nav-list-item {
+      color: black;
+      margin: 1rem;
+    }
+
+    .close-menu {
+      animation: none;
+    }
+
+    .nav-open {
+      animation: none;
+    }
+
+    .nav-closed {
+      animation: none;
+    }
   }
 
 </style>

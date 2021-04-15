@@ -26,7 +26,7 @@ export default {
 <style>
 
   .page-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 2rem 1rem;
     font-style: italic;
   }
