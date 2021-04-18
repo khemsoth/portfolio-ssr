@@ -9,7 +9,8 @@
         <div class="icon-cont">
          <a class="soc-icon" href="https://www.linkedin.com/in/keithhemsoth/" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'linkedin']" /></a>
          <a class="soc-icon" href="https://github.com/khemsoth" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'github']" /></a>
-        </div> 
+         <a class="soc-icon" href="https://twitter.com/khems17" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'twitter']" /></a>       
+        </div>
       </div>
       <div v-on-clickaway="away" class="nav">
         <input class="nav-btn" v-on:click="navToggle" :class="{ open: isOpen, closed: !isOpen }" type="button" value="+">
@@ -138,8 +139,8 @@ export default {
 
   .nav-list {
     list-style-type: none;
-    position: absolute;  
-    width: 45vw; 
+    position: absolute;
+    width: 45vw;
     right: 1rem;
     background-color: lightslategray;
     padding: 1rem;
@@ -194,6 +195,7 @@ export default {
   }
 
   @media (min-width: 769px) {
+
     .nav-btn {
       display: none;
     }
@@ -205,6 +207,7 @@ export default {
     .nav-list {
       position: static;
       display: flex;
+      padding: 1rem 0;
       flex-direction: row;
       justify-content: flex-end;
       background-color: rgba(0, 0, 0, 0);

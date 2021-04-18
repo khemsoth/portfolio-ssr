@@ -1,6 +1,8 @@
 <template>
   <div class="project-cont">
-    <a :href="link" target="_blank"><img v-on:click="emitOpenProject" class="project-image" :src="image"></a>
+    <div class="img-cont">
+      <a :href="link" target="_blank"><img v-on:click="emitOpenProject" class="project-image" :src="image"></a>
+    </div>
     <div class="project-info">
       <h4 class="project-title">{{ title }}</h4>
       <p class="project-desc">{{ description }}</p>
@@ -27,9 +29,6 @@ export default {
 
 <style>
 
-  .project-cont {
-  }
-
   .project-image {
     width: 100%;
     height: 35vh;
@@ -47,6 +46,31 @@ export default {
 
   .project-desc {
     margin-top: 1rem;
+  }
+
+  @media (min-width: 769px) {
+    .project-cont {
+      
+      display: flex; 
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .img-cont {
+      min-width: 50%;
+      text-align: center;
+    }
+
+    .project-image {
+      width: auto;
+      min-width: 90%;
+      max-width: 90%;
+    }
+
+    .project-info {
+      max-width: 50%;
+      margin-left: 2rem;
+    }
   }
 
 </style>

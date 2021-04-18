@@ -97,4 +97,14 @@ export default {
       margin-left: 9rem;
     }
   }
+
+  @media (min-width: 769px) {
+    .page-title-projects {
+      margin-left: 1rem;
+    }
+
+    .project {
+      width: 90%;
+    }
+  }
 </style>

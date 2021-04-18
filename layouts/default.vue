@@ -96,4 +96,11 @@ body {
   min-height: 100%;
 }
 
+@media (min-width: 769px) {
+  .content {
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
+
 </style>
