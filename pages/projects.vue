@@ -56,61 +56,35 @@ export default {
 
 <style scoped>
 
+  .projects {
+    padding: 0;
+    width: 80vw;
+    margin: 0 auto;
+  }
+
   .page-title-projects {
     font-size: 2.5rem;
     margin: 2rem 1rem;
     font-style: italic;
+    text-align: center;
   }
 
-  .project {
-    width: 90%;
-    margin: 4rem auto;
-  }
-
-  @media (min-width: 460px) {
-    .project {
-      width: 60%;
-    }
-
+  @media (min-width: 321px) {
     .projects {
-      padding: 0;
-      margin: 0 auto;
-    }
-
-    .page-title-projects {
-      margin-left: 6rem;
+      width: 75vw;
     }
   }
 
-  @media (min-width: 600px) {
-    .project {
-      width: 50%;
-    }
-  }
-
-  @media (min-width: 720px) {
-    .project {
-      width: 45%;
-    }
-
-    .page-title-projects {
-      margin-left: 9rem;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .page-title-projects {
-      margin-left: 1rem;
-    }
-
-    .project {
-      width: 90%;
-    }
-  }
-
-  @media (min-width: 1250px) {
+  @media (min-width: 1025px) {
     .projects {
-      width: 70vw;
+      max-width: 60vw;
     }
   }
+
+  @media (min-width: 1441px) {
+    .projects {
+      max-width: 50vw;
+    }
+  }
+
 </style>

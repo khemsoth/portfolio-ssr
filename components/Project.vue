@@ -29,9 +29,14 @@ export default {
 
 <style>
 
+  .project-cont {
+    margin: 3rem 0;
+  }
+
   .project-image {
     width: 100%;
-    height: 35vh;
+    min-height: 20vh;
+    max-height: 20vh;
     border-radius: 1rem;
   }
 
@@ -48,28 +53,34 @@ export default {
     margin-top: 1rem;
   }
 
-  @media (min-width: 769px) {
-    .project-cont {
-      
-      display: flex; 
-      flex-direction: row;
-      justify-content: space-between;
+  @media (min-width: 550px) {
+    .project-image {
+      max-width: 70%;
     }
 
     .img-cont {
-      min-width: 50%;
       text-align: center;
     }
+  }
 
-    .project-image {
-      width: auto;
-      min-width: 90%;
-      max-width: 90%;
+  @media (min-width: 769px) {
+    .project-cont {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .img-cont {
+      width: 50%;
     }
 
     .project-info {
-      max-width: 50%;
-      margin-left: 2rem;
+      width: 50%;
+    }
+  }
+
+  @media (min-width: 1441px) {
+    .project-cont {
+      max-width: 100%;
     }
   }
 
