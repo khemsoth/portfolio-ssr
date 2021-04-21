@@ -54,7 +54,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
   .page-title-projects {
     font-size: 2.5rem;
@@ -105,6 +105,12 @@ export default {
 
     .project {
       width: 90%;
+    }
+  }
+
+  @media (min-width: 1250px) {
+    .projects {
+      width: 70vw;
     }
   }
 </style>

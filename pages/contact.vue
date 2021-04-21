@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="contact-page">
     <h1 class="page-title">Contact Me</h1>
     <form class="page-desc" name="contact">
       <h4 class="contact-title">Name:</h4>
@@ -52,15 +52,15 @@ export default {
 <style scoped>
 
   .page-title {
-    margin-left: 1rem;
+    font-size: 2.5rem;
+    font-style: italic;
+    text-align: center;
   }
 
   .page-desc {
     display: flex;
     flex-direction: column;
-    width: 90vw;
     margin: 0 auto;
-    margin-bottom: 3rem;
   }
 
   .contact-title {
@@ -81,9 +81,15 @@ export default {
     border: 1px solid black;
     border-radius: 1rem;
     padding: .5rem;
-    width: 40vw;
+    width: 100%;
     align-self: flex-end;
     margin-top: 2rem;
+  }
+
+  @media (min-width: 769px) {
+    .submit-btn {
+      width: 30%;
+    }
   }
 
 </style>

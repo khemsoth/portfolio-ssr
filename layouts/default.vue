@@ -94,12 +94,26 @@ body {
 .content {
   flex: 1;
   min-height: 100%;
+  margin: 0 auto;
+  width: 90vw;
 }
 
 @media (min-width: 769px) {
   .content {
-    width: 90vw;
     margin: 0 auto;
+    width: 70vw;
+  }
+}
+
+@media (min-width: 1025px) {
+  .content {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 1441px) {
+  .content {
+    width: 50vw;
   }
 }
 
