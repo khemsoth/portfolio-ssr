@@ -58,6 +58,11 @@ export default {
       max-width: 70%;
     }
 
+    .project-info {
+      margin: 1rem auto;
+      max-width: 70%;
+    }
+
     .img-cont {
       text-align: center;
     }
@@ -78,9 +83,24 @@ export default {
     }
   }
 
+  @media (min-width: 1220px) {
+
+    .project-title {
+      font-size: 2rem;
+    }
+
+    .project-info {
+      font-size: 1.2rem;
+    }
+  }
+
   @media (min-width: 1441px) {
     .project-cont {
       max-width: 100%;
+    }
+
+    .project-title {
+      font-size: 2.3rem;
     }
   }
 

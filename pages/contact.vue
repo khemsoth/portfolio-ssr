@@ -40,7 +40,6 @@ export default {
         email: this.email,
         message: this.message
       })
-      console.log(formInfo.email)
       this.name = '',
       this.email = '',
       this.message = ''

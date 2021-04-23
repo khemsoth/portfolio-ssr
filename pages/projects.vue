@@ -81,7 +81,7 @@ export default {
     }
   }
 
-  @media (min-width: 1441px) {
+  @media (min-width: 1900px) {
     .projects {
       max-width: 50vw;
     }

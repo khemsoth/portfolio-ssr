@@ -60,10 +60,10 @@ body {
 .header {
   height: 20vh;
   max-width: 100vw;
-  background-color: red;
 }
 
 .content {
+  color: #34495e;
   flex: 1;
   min-height: 100%;
   margin: 0 auto;

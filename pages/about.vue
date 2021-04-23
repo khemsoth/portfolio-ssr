@@ -10,7 +10,7 @@
         With an analytical mindset, and focus on mobile first development principles, I create intuitive websites and web apps with the user 
         experience being a top priority.
       </p>
-      <p class="about-content cta ">
+      <p class="about-content cta">
         <nuxt-link class="nav-list-item contact-link" to="/contact">Reach out and let's make something great together!</nuxt-link>
       </p>
     </main>
@@ -47,6 +47,10 @@ export default {
 
   .cta {
     text-align: center;
+  }
+
+  .cta a {
+    color: #810000;
   }
 
 </style>

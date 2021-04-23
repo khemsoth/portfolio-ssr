@@ -28,8 +28,8 @@ app.post('/', (req, res) => {
     `
   }
   transporter.sendMail(mailOpts, function(err, info) {
-    if(err) console.log(`errorrrrr: ${err}`)
-    else console.log(info)
+    if(err) console.log(`error: ${err}`)
+    else console.log(`Message sent successfully`)
   })  
 
 })

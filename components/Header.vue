@@ -2,14 +2,14 @@
   <div class="header">
     <div class="title-cont">
      <h1 class="title">Keith Hemsoth</h1>
-     <p class="circa">c. 1991</p>
+     <a href="https://pop-culture.us/Annual/1991.html" target="_blank" class="circa">c. 1991</a>
     </div>
     <div class="nav-cont">
       <div class="social-media-cont">
         <div class="icon-cont">
-         <a class="soc-icon" href="https://www.linkedin.com/in/keithhemsoth/" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'linkedin']" /><p class="soc-query">/in/keithhemsoth</p></a>
-         <a class="soc-icon" href="https://github.com/khemsoth" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'github']" /><p class="soc-query">khemsoth</p></a>
-         <a class="soc-icon" href="https://twitter.com/khems17" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'twitter']" /><p class="soc-query">khems17</p></a>       
+         <a class="soc-icon" href="https://www.linkedin.com/in/keithhemsoth/" target="_blank" rel="noopener noreferrer"><font-awesome-icon class="fa-icon" :icon="['fab', 'linkedin']" /><p class="soc-query">/in/keithhemsoth</p></a>
+         <a class="soc-icon" href="https://github.com/khemsoth" target="_blank" rel="noopener noreferrer"><font-awesome-icon class="fa-icon" :icon="['fab', 'github']" /><p class="soc-query">/khemsoth</p></a>
+         <a class="soc-icon" href="https://twitter.com/khems17" target="_blank" rel="noopener noreferrer"><font-awesome-icon class="fa-icon" :icon="['fab', 'twitter']" /><p class="soc-query">/khems17</p></a>       
         </div>
       </div>
       <div v-on-clickaway="away" class="nav">
@@ -59,20 +59,22 @@ export default {
     },
     away() {
       this.closeMenu()
-    }
+    },
   }
 }
 </script>
 
 <style>
+
   .header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
     display: flex;
     flex-direction: column;
   }
 
   .title {
     font-size: 2rem;
-    color: black;
   }
 
   .title-cont {
@@ -81,6 +83,16 @@ export default {
     justify-content: center;
     text-align: center;
     height: 50%;
+  }
+
+  .circa {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 auto;
+  }
+
+  .circa:hover {
+    cursor: help;
   }
 
   .social-media-cont {
@@ -97,6 +109,11 @@ export default {
   .soc-icon {
     margin: 0 .5rem;
     font-size: 1.3rem;
+    width: fit-content;
+  }
+
+  .soc-icon:hover {
+    font-style: italic;
   }
 
   .nav {
@@ -117,6 +134,7 @@ export default {
     cursor: pointer;
     border: none;
     background-color: rgba(0, 0, 0, 0);
+    color: #ecf0f1;
     width: 3rem;
     padding: 0;
     font-size: 2rem;
@@ -142,13 +160,22 @@ export default {
     position: absolute;
     width: 45vw;
     right: 1rem;
-    background-color: lightslategray;
+    background-color: #bdc3c7;
     padding: 1rem;
     border-radius: 1rem;
   }
 
   .nav-list-item {
     text-decoration: none;
+    color: #34495e;
+  }
+
+  .nav-list-item:hover {
+    font-weight: bolder;
+  }
+
+  .fa-icon {
+    color: #ecf0f1;
   }
 
   @keyframes menuDown {
@@ -221,6 +248,7 @@ export default {
     }
 
     .soc-query {
+      color: #ecf0f1;
       display: inline-block;
       font-size: .9rem;
       margin-left: .5rem;
@@ -246,7 +274,7 @@ export default {
     }
 
     .nav-list-item {
-      color: black;
+      color: #ecf0f1;
       margin: 1rem;
     }
 
@@ -270,7 +298,7 @@ export default {
     }
   }
 
-  @media (min-width: 1441px) {
+  @media (min-width: 1900px) {
     .nav-cont {
       width: 50vw;
       margin: 0 auto;
