@@ -10,7 +10,7 @@
         With an analytical mindset, and focus on mobile first development principles, I create intuitive websites and web apps with the user 
         experience being a top priority.
       </p>
-      <p class="about-content">
+      <p class="about-content cta ">
         <nuxt-link class="nav-list-item contact-link" to="/contact">Reach out and let's make something great together!</nuxt-link>
       </p>
     </main>
@@ -29,6 +29,7 @@ export default {
     font-size: 2.5rem;
     margin: 2rem 1rem;
     font-style: italic;
+    text-align: center;
   }
 
   .page-desc {
@@ -42,6 +43,10 @@ export default {
   .contact-link {
     font-style: italic;
     font-size: 1.2rem;
+  }
+
+  .cta {
+    text-align: center;
   }
 
 </style>

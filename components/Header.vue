@@ -7,9 +7,9 @@
     <div class="nav-cont">
       <div class="social-media-cont">
         <div class="icon-cont">
-         <a class="soc-icon" href="https://www.linkedin.com/in/keithhemsoth/" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'linkedin']" /></a>
-         <a class="soc-icon" href="https://github.com/khemsoth" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'github']" /></a>
-         <a class="soc-icon" href="https://twitter.com/khems17" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'twitter']" /></a>       
+         <a class="soc-icon" href="https://www.linkedin.com/in/keithhemsoth/" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'linkedin']" /><p class="soc-query">/in/keithhemsoth</p></a>
+         <a class="soc-icon" href="https://github.com/khemsoth" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'github']" /><p class="soc-query">khemsoth</p></a>
+         <a class="soc-icon" href="https://twitter.com/khems17" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'twitter']" /><p class="soc-query">khems17</p></a>       
         </div>
       </div>
       <div v-on-clickaway="away" class="nav">
@@ -95,7 +95,7 @@ export default {
   }
 
   .soc-icon {
-    margin: 0 1rem;
+    margin: 0 .5rem;
     font-size: 1.3rem;
   }
 
@@ -194,7 +194,37 @@ export default {
     visibility: hidden;
   }
 
+  .soc-query {
+    display: none;
+  }
+
+  @media (min-width: 426px) {
+    .soc-icon {
+      margin: 0 1rem;
+    }
+  }
+
   @media (min-width: 769px) {
+
+    .nav-cont {
+      width: 70vw;
+      margin: 0 auto;
+    }
+
+    .icon-cont {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .soc-icon {
+      margin: .1rem 0;
+    }
+
+    .soc-query {
+      display: inline-block;
+      font-size: .9rem;
+      margin-left: .5rem;
+    }
 
     .nav-btn {
       display: none;
@@ -208,8 +238,9 @@ export default {
       position: static;
       display: flex;
       padding: 1rem 0;
-      flex-direction: row;
-      justify-content: flex-end;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-end;
       background-color: rgba(0, 0, 0, 0);
       list-style-type: none;
     }
@@ -229,6 +260,20 @@ export default {
 
     .nav-closed {
       animation: none;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .nav-cont {
+      width: 60vw;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: 1441px) {
+    .nav-cont {
+      width: 50vw;
+      margin: 0 auto;
     }
   }
 
