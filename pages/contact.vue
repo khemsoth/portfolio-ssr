@@ -50,6 +50,10 @@ export default {
 
 <style scoped>
 
+  .contact-page {
+    margin-bottom: 5rem;
+  }
+
   .page-title {
     font-size: 2.5rem;
     font-style: italic;
@@ -77,12 +81,25 @@ export default {
 
   .submit-btn {
     background-color: rgba(0, 0, 0, 0);
-    border: 1px solid black;
+    border: 1px solid #2c3e50;
+    color: #2c3e50;
     border-radius: 1rem;
     padding: .5rem;
     width: 100%;
     align-self: flex-end;
     margin-top: 2rem;
+  }
+
+  @keyframes btnColorChange {
+    from { background-color: rgba(0, 0, 0, 0); }
+    to { background-color: #2c3e50; }
+  }
+
+  .submit-btn:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: #2c3e50;
+    animation: btnColorChange 1s ease-out;
   }
 
   @media (min-width: 769px) {

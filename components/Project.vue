@@ -36,7 +36,7 @@ export default {
   .project-image {
     width: 100%;
     min-height: 20vh;
-    max-height: 20vh;
+    max-height: 30vh;
     border-radius: 1rem;
   }
 

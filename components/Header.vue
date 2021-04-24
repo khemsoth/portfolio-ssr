@@ -86,6 +86,7 @@ export default {
   }
 
   .circa {
+    width: fit-content;
     color: #ecf0f1;
     text-decoration: none;
     margin: 0 auto;

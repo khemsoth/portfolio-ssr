@@ -60,6 +60,7 @@ export default {
     padding: 0;
     width: 80vw;
     margin: 0 auto;
+    margin-bottom: 5rem;
   }
 
   .page-title-projects {
@@ -77,7 +78,7 @@ export default {
 
   @media (min-width: 1025px) {
     .projects {
-      max-width: 60vw;
+      max-width: 50vw;
     }
   }
 
