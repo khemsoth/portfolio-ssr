@@ -26,5 +26,7 @@
     "vue-kinesis": "^1.2.3",
     "xss-filters": "^1.2.7"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@nuxtjs/google-analytics": "^2.4.0"
+  }
 }

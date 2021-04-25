@@ -10,7 +10,7 @@
       <hr class="divider">
       <h4 class="contact-title">Message:</h4>
       <textarea class="contact-desc" v-model="message" name="message" rows="5" placeholder="Enter Message Here" required></textarea>
-      <input class="submit-btn" type="button" value="Send Message" v-on:click="submitContactForm">
+      <input class="submit-btn" type="submit" value="Send Message">
     </form>
   </div>
 </template>
