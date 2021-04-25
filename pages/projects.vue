@@ -31,19 +31,22 @@ export default {
           title: 'Jot It Down',
           image: noteImage,
           description: 'Simple note app to keep track of anything you need to remember.',
-          link: 'https://jot-a-note.netlify.app/'
+          link: 'https://jot-a-note.netlify.app/',
+          alt: 'Array of 9 post-it notes'
         },
         {
           title: 'Flag-to-Flag Fuel Calculator',
           image: fuelImage,
           description: 'Fuel usage calculator with average laptime calculator to use the proper amount of fuel for your next race session.',
-          link: 'https://flag-to-flag-fuel.netlify.app/'
+          link: 'https://flag-to-flag-fuel.netlify.app/',
+          alt: 'Vintage red fuel pump'
         },
         {
           title: 'Fantastic Concrete Solutions',
           image: FCSImage,
           description: 'Landing page for a local construction company, specializing in concrete washing, sealing, and repair.',
-          link: 'https://fantastic-concrete-solutions.herokuapp.com/'
+          link: 'https://fantastic-concrete-solutions.herokuapp.com/',
+          alt: 'Outdoor patio set with grill on wood floor'
         },
       ]
     }

@@ -1,7 +1,7 @@
 <template>
   <div class="contact-page">
     <h1 class="page-title">Contact Me</h1>
-    <form class="page-desc" name="contact">
+    <form class="page-desc" method="POST" name="contact" data-netlify="true" action="/contact">
       <h4 class="contact-title">Name:</h4>
       <input class="contact-desc" v-model="name" type="text" name="name" placeholder="Enter Name Here" required>
       <hr class="divider">
@@ -30,6 +30,7 @@ export default {
   methods: {
     submitContactForm(e) {
       e.preventDefault
+      /*
       let formInfo = {
         name: this.name,
         email: this.email,
@@ -43,6 +44,7 @@ export default {
       this.name = '',
       this.email = '',
       this.message = ''
+      */
     }
   }
 }

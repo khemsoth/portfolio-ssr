@@ -1,7 +1,7 @@
 <template>
   <div class="project-cont">
     <div class="img-cont">
-      <a :href="link" target="_blank"><img v-on:click="emitOpenProject" class="project-image" :src="image"></a>
+      <a :href="link" target="_blank"><img v-on:click="emitOpenProject" class="project-image" :src="image" :alt="alt"></a>
     </div>
     <div class="project-info">
       <h4 class="project-title">{{ title }}</h4>
@@ -17,7 +17,8 @@ export default {
     title: String,
     image: String,
     description: String,
-    link: String
+    link: String,
+    alt: String
   },
   methods: {
     emitOpenProject() {
@@ -38,6 +39,11 @@ export default {
     min-height: 20vh;
     max-height: 30vh;
     border-radius: 1rem;
+  }
+
+  .project-image:hover {
+    opacity: .5;
+    transition-duration: 1s;
   }
 
   .project-info {
