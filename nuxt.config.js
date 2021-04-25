@@ -12,7 +12,7 @@ export default {
       { hid: 'description', name: 'description', content: 'This is the portfolio page for Keith Hemsoth, a freelance web developer who creates web sites and web applications.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/static/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   serverMiddleware: [
