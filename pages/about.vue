@@ -13,6 +13,9 @@
       <p class="about-content cta">
         <nuxt-link class="nav-list-item contact-link" to="/contact">Reach out and let's make something great together!</nuxt-link>
       </p>
+      <div class="about-img-cont">
+        <img class="about-img" src="../assets/images/DVwTjCnM-3110491048.jpeg" alt="Keith at outdoor brewery with goblet of beer in front of him">
+      </div>
     </main>
   </div>
 </template>
@@ -51,6 +54,16 @@ export default {
 
   .cta a {
     color: #810000;
+  }
+
+  .about-img-cont {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-img {
+    width: 70%;
+    border-radius: 50%;
   }
 
 </style>
