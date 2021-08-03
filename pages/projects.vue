@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import noteImage from '../assets/images/kelly-sikkema--1_RZL8BGBM-unsplash.jpg'
-import fuelImage from '../assets/images/folco-masi-fwh28c0vUGk-unsplash.jpg'
+import kiwanisLogo from '../assets/images/Kiwanis.jpg'
+import MCMImage from '../assets/images/jason-wong-kSlL887znkE-unsplash.jpg'
 import FCSImage from 'assets/images/FCS.jpg'
 
 export default {
@@ -28,18 +28,18 @@ export default {
     return {
       projects: [
         {
-          title: 'Jot It Down',
-          image: noteImage,
-          description: 'Simple note app to keep track of anything you need to remember.',
-          link: 'https://jot-a-note.netlify.app/',
-          alt: 'Array of 9 post-it notes'
+          title: 'North Ridgeville Kiwanis Club',
+          image: kiwanisLogo,
+          description: 'Get all the information about the North Ridgeville, Ohio Kiwanis Club.',
+          link: 'https://k18026.site.kiwanis.org/',
+          alt: 'Kiwanis Club Logo'
         },
         {
-          title: 'Flag-to-Flag Fuel Calculator',
-          image: fuelImage,
-          description: 'Fuel usage calculator with average laptime calculator to use the proper amount of fuel for your next race session.',
-          link: 'https://flag-to-flag-fuel.netlify.app/',
-          alt: 'Vintage red fuel pump'
+          title: 'Morning Coffee Marketing',
+          image: MCMImage,
+          description: 'Landing page for a local social marketing agency.',
+          link: 'https://morningcoffeemarketing.herokuapp.com/',
+          alt: 'Cup of coffee on wooden table'
         },
         {
           title: 'Fantastic Concrete Solutions',
